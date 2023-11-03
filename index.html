@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <link rel="stylesheet" href="styles.css">
+    <title>487</title>
+    <style>
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+            margin-right: 96px;
+            margin-top: 25px;
+            font-size: 18px
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+
+        .dropdown-toggle.active:after {
+            content: "–";
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-toggle.active+.dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content p {
+            padding: 10px;
+            margin: 0;
+        }
+
+        .dropdown-toggle::after {
+            content: "\A";
+            white-space: pre;
+        }
+
+
+        .plus-sign:after {
+            content: "+";
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="bg-white border-b border-black text-black p-4 flex justify-between items-center">
+        <div class="flex space-x-4">
+            <a href="#" class="text-xl font-semibold">SHOP</a>
+            <a href="#" class="text-xl font-semibold">STORY</a>
+        </div>
+        <div class="text-xl font-semibold">DECEM</div>
+
+        <div class="flex items-center space-x-4">
+            <div class="cart-toggle">
+                <a id="menu-toggle" class="text-black-300 hover:text-black">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+
+            <div class="cart-drawer">
+                <div class="cart-menu">
+                    <h2 class="text-xl font-semibold">BASKET (0)</h2>
+                    <button id="close-cart" class="text-red-500">Close Cart</button>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+
+
+
+
+    </nav>
+
+    <div class="flex justify-end">
+
+        <ul class="flex">
+            <li class="inline-block mr-10 text-xl font-semibold">London Dry</li>
+            <li class="inline-block mr-10 text-xl font-semibold">Spiced Blend</li>
+            <li class="inline-block mr-10 text-xl font-semibold">Aperitif</li>
+            <li class="inline-block mr-10 text-xl font-semibold">Trio</li>
+        </ul>
+
+    </div>
+    <p class="flex justify-end text-3xl font-semibold pt-4 mr-60">Spiced Blend with</p>
+    <p class="flex justify-end text-3xl font-semibold italic pt-2 mr-72">Caribbean Rum</p>
+
+    <div class="flex justify-end">
+
+        <div class="dropdown-container">
+            <div class="dropdown-toggle plus-sign">Description</div>
+            <div class="dropdown-content">
+                <p>Blending a duo of light and white Caribbean rums from Martinique and Dominican Republic as the smooth
+                    base. Spices are then added and the mix is allowed to steep for 2 days to draw out all of the flavor
+                    before being filtered and masterfully blended with natural distillates to 10% ABV. The result is a
+                    buttery, caramel-forward, savory and spicy light spirit with a big impact both on the nose and the
+                    taste buds.</p>
+            </div>
+        </div>
+        <div class="dropdown-container">
+            <div class="dropdown-toggle plus-sign">Taste</div>
+            <div class="dropdown-content">
+                <p>Deep bonfire toffee, warming savory spice, rounded honey sweetness, buttery caramel throughout with a
+                    hint of tropical fruit.</p>
+            </div>
+        </div>
+        <div class="dropdown-container">
+            <div class="dropdown-toggle plus-sign">Serve</div>
+            <div class="dropdown-content">
+                <p>Simply serve 50ml chilled over ice with 150ml premium Ginger Ale and a lime wedge. 2.3% ABV.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+        dropdownToggles.forEach(dropdownToggle => {
+            dropdownToggle.addEventListener('click', () => {
+                dropdownToggle.classList.toggle('active');
+            });
+        });
+    </script>
+
+
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="sp"
+                    src="//decemdrinks.com/cdn/shop/products/SpicedBlend_Serve_1024x1024.png?v=1659602678"
+                    alt="Spiced Blend"></div>
+            <div class="swiper-slide"><img class="sp"
+                    src="https://decemdrinks.com/cdn/shop/products/SpicedBlend_Back_1024x1024.png?v=1659602678"
+                    alt="Spiced Blend"></div>
+            <div class="swiper-slide"><img class="sp"
+                    src="https://decemdrinks.com/cdn/shop/products/SpicedBlend_Front_1024x1024.png?v=1659602678"
+                    alt="Spiced Blend"></div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    </div>
+    </div>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const cartDrawer = document.querySelector(".cart-drawer");
+        const closeCart = document.getElementById("close-cart");
+
+        menuToggle.addEventListener("click", () => {
+            cartDrawer.style.right = "0";
+        });
+
+        closeCart.addEventListener("click", () => {
+            cartDrawer.style.right = "-100%";
+        });
+
+
+    </script>
+
+</body>
+
+</html>
